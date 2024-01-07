@@ -1,7 +1,5 @@
-
-
 export default function Packages(props) {
-    const displayPackages = props.packages.map((eachPackage) => <li>{eachPackage}</li>)
+    const displayPackages = props.packages.map((eachPackage, index) => <li key={index}>{eachPackage}</li>);
 
     return (
         <div>
@@ -9,10 +7,8 @@ export default function Packages(props) {
                 <div className="packagesHeader">
                     <h1>Our Packages</h1>
                 </div>
-                <ul>
-                    {displayPackages}
-                </ul>
+                <ul>{displayPackages}</ul>
             </div>
         </div>
-    )
+    );
 }

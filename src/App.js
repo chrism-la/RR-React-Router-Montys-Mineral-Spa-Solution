@@ -32,9 +32,9 @@ function App() {
 
                 <div className="display">
                     <Routes>
-                        <Route path="/" component={Home} />
-                        <Route path="/about" component={About} />
-                        <Route path="/packages" render={() => <Packages packages={packages} />} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/packages" element={<Packages packages={packages} />} />
                     </Routes>
                 </div>
             </Router>
